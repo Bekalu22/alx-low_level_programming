@@ -4,18 +4,15 @@
 
 /**
  *
- * *main – Prints random number to variable
+ *main – Prints random number to variable
  *
- * *
- *
- * *Return: Always (Successful)
- *
- * */
+ *Return: Always (Successful)
+ */
 
 int main(void)
 {
 	int n;
-	char last[] = "last digit of";
+	char last[] = "Last digit of";
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -34,4 +31,3 @@ int main(void)
 	}
 	return (0);
 }
-
