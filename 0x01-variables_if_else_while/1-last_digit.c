@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- *main – Prints random number to variable
+ *main - Prints random number to variable
  *
  *Return: Always (Successful)
  */
