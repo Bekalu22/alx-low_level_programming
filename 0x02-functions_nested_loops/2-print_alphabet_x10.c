@@ -2,6 +2,7 @@
 
 /**
  * main - entry point
+ * @c : takes in a character
  * Printing lowercase alphabets 10 times.
  */
 void print_alphabet_x10(void)
