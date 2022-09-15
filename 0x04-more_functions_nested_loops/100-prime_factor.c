@@ -8,24 +8,31 @@
  */
 int main(void)
 {
-	long number = 612852475143;
-	int inc;
+	long int n;
+	long int max;
+	long int i;
 
-	while (inc++ < number / 2)
+	n = 612852475143;
+	max = -1;
+
+	while (n % 2 == 0)
 	{
-		if (number % inc == 0)
-		{
-			number /= 2;
-			continue;
-		}
+		max = 2;
+		n /= 2;
+	}
 
-		for (inc = 3; inc < number / 2; inc += 2)
+	for (i = 3; i <= sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
 		{
-			if (number % inc == 0)
-				number /= inc;
+			max = i;
+			n = n / i;
 		}
 	}
 
+	if (n > 2)
+		max = n;
+	printf("%ld\n", max);
+
 	return (0);
 }
-
