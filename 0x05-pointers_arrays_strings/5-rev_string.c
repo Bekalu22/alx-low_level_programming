@@ -4,10 +4,11 @@
 
 
 /**
- *
  * rev_string - Prints a string in reverse order
  *
  * @s: string to reverse
+ *
+ * Description: it desplays reverse string
  *
  * Return: nothing
  */
@@ -20,8 +21,7 @@ void rev_string(char *s)
 	for (i = 0; s[i]; i++)
 	{
 		length++;
-	}
-	
+	}	
 	count = length;
 
 	start_c = s;
