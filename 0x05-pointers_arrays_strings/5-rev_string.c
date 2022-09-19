@@ -13,9 +13,26 @@
  */
 void rev_string(char *s)
 {
-	int len = strlen(s);
+	int i, c, k;
+	char *a, aux;
+
+	a = s;
 	
-	while (len--)
-		putchar(*(s + len));
-	putchar(10);
+	while (s[c] != '\0')
+	{
+		c++;
+	}
+
+	for (k = 1; k < c; k++)
+	{
+		a++;
+	}
+
+	for (i = 0; i < (c / 2); i++)
+	{
+		aux = s[i];
+		s[i] = *a;
+		*a = aux;
+		a--;
+	}
 }
