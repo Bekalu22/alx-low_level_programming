@@ -32,7 +32,7 @@ char *add_strings(char *n1, char *n2, char *r, int r_index)
 
 	for (; *n1 && *n2; n1--, n2--, r_index--)
 	{
-		num = (*n1 - '0') + ('n2 - '0');
+		num = (*n1 - '0') + (*n2 - '0');
 		num += tens;
 
 		*(r + r_index) = (num % 10) + '0';
