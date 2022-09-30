@@ -41,6 +41,6 @@ int main(int args, char *argv[])
 			break;
 		coins += 1;
 	}
-	printf(" % d\n", coins);
+	printf("%d\n", coins);
 	return (0);
 }
