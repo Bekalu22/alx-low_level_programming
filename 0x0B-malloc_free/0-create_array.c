@@ -1,34 +1,62 @@
-#include "main.h"
-#include <stdlib.h>
+#include "main.h"                                                                                                           
 
-/**
- * create_array - creates an array of chars andinitializes it with
- * a specific array
+#include <stdlib.h>                                                                                                         
+
+                                                                                                                            
+
+/**                                                                                                                         
  *
- * @size: size of array.
+ *  * create_array - creates an array of chars andinitializes it with                                                          
  *
- * @c: char to initialize array with
+ *   * a specific array                                                                                                         
  *
- * Return: NULL if it fails or pointer to array
- */
-char *create_array(unsigned int size, char c)
-{
-	char *arr;
-	unsigned int i;
+ *    *                                                                                                                          
+ *
+ *     * @size: size of array.                                                                                                    
+ *
+ *      *                                                                                                                          
+ *
+ *       * @c: char to initialize array with                                                                                        
+ *
+ *        *                                                                                                                          
+ *
+ *         * Return: NULL if it fails or pointer to array                                                                             
+ *
+ *          */                                                                                                                         
 
-	if (sizee == 0)
-	{
-		return (NULL);
-	}
+char *create_array(unsigned int size, char c)                                                                               
 
-	arr = malloc(sizeof(char) * size);
+{                                                                                                                           
 
-	if (arr == NULL)
-		return (NULL);
-	for (i = 0; i < size; i++)
-	{
-		arr[i] = c;
-	}
+	        char *arr;                                                                                                          
 
-	return(arr)
+		        unsigned int i;                                                                                                     
+
+			                                                                                                                            
+
+			        if (sizee == 0)                                                                                                     
+
+					        {                                                                                                                   
+
+							                return (NULL);                                                                                              
+
+									        }                                                                                                                   
+
+				                                                                                                                            
+
+				        arr = malloc(sizeof(char) * size);                                                                                  
+
+					                                                                                                                            
+
+					        if (arr == NULL)                                                                                                    
+
+							                return (NULL);                                                                                              
+
+						        for (i = 0; i < size; i++)                                                                                          
+
+								        {                                                                                                                   
+
+										                arr[i] = c;
+									}
+							return (arr)
 }
