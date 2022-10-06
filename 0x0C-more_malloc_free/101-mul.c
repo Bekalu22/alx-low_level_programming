@@ -43,12 +43,11 @@ char *create_xarray(int size)
 	for (index = 0; index < (size - 1); index++)
 		array[index] = 'x';
 	array[index] = '\0';
-	
 	return (array);
 }
 
 /**
-* iterate_zeroes - iterates through a string of numbers containing 
+* iterate_zeroes - iterates through a string of numbers containing
 *  leading zeroes until it hits a non-zero number.
 * @str: the string of numbers to be iterate through.
 *
@@ -65,7 +64,7 @@ char *iterate_zeroes(char *str)
 /**
 * get_digit - converts a digit character to a corresponding int.
 * @c: the character to be converted.
-* 
+*
 * Description: if c is a non-digit, the function exits with
 *      a status of 98.
 * Return: The converted int.
@@ -136,15 +135,26 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 * @next_prod: the next product to be added.
 * @next_len: the length of next_prod.
 */
-void add_num(; *final_prod != 'x'; final_prod--)
+void add_nums(char *final_prod, char *next_prod, int next_len)
 	{
-		num = (*final_prod - '0') + (*next_prod - '0');
-		num += tens;
-		*final_prod = (num % 10) + '0';
-		tens = num / 10;
+		int num, tens = 0;
 
-		next_prod--;
-		next_len--;
+		while (*(final_rod + 1))
+			final_prod++;
+
+		while (*(next_prod + 1))
+			next_prod++;
+
+		for (; *final_prod != 'x'; final_prod--)
+		{
+			num = (*final_prod - '0') + (*next_prod - '0');
+			num += tens;
+			*final_prod = (num % 10) + '0';
+			tens = num / 10;
+
+			next_prod--;
+			next_len--;
+		}
 	}
 	for (; nextlen >= 0 && *next_prod != 'x'; next_len--)
 	{
@@ -186,7 +196,7 @@ int main(int argc, char *argv[])
 		argv[1] = iterate_zeroes(argv[1]);
 	if (*(argv[2]) == '0')
 		argv[2] = iterate_zeroes(argv[2]);
-	if(*(argv[1]) == '\0' || *(argv[2]) == '\0')
+	if (*(argv[1]) == '\0' || *(argv[2]) == '\0')
 	{
 		printf("0\n");
 		return (0);
@@ -196,7 +206,7 @@ int main(int argc, char *argv[])
 	final_prod = create_xarray(size + 1);
 	next_prod = create_xarray(size + 1);
 
-	for (index = find_len(argv[2]) - 1; index >= 0; index --)
+	for (index = find_len(argv[2]) - 1; index >= 0; index--)
 	{
 		digit = get_digit(*(argv[2] + index));
 		get_prod(next_prod, argv[1], digit, zeroes++);
