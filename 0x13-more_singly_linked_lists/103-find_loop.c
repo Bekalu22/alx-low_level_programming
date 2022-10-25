@@ -9,7 +9,7 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_i *node1, *node2;
+	listint_t *node1, *node2;
 
 	if (head == NULL || head->next == NULL)
 		return (NULL);
