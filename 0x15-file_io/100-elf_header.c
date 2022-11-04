@@ -113,7 +113,7 @@ void print_data(unsigned char *e_ident)
  */
 void print_version(unsigned char *e_ident)
 {
-	printf("  Version:                           %"
+	printf("  Version:                           %d",
 			e_ident[EI_VERSION]);
 	switch (e_ident[EI_VERSION])
 	{
@@ -262,9 +262,8 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	Elf64_Ehdr *header;
 	int o, r;
 
-	io = open(argv[1], O_RDONLY)
-
-		if (o == -1)
+	o = open(argv[1], O_RDONLY);
+	if (o == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
@@ -281,7 +280,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	{
 		free(header);
 		close_elf(o);
-		printf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
 	check_elf(header->e_ident);
