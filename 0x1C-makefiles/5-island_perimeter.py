@@ -18,32 +18,3 @@ def island_perimeter(grid):
     else:
         c = (c * 2) - 1
     return c
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
